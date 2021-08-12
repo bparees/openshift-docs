@@ -30,3 +30,8 @@ No assurances are made at this time that a new installation of a product minor r
 == Usage of API fields that have the prefix "unsupported” or undocumented annotations
 
 Select APIs in the product expose fields with the prefix `unsupported<FieldName>`. No assurances are made at this time that usage of this field is supported across releases or within a release. Product support can request a customer to specify a value in this field when debugging specific problems, but its usage is not supported outside of that interaction. Usage of annotations on objects that are not explicitly documented are not assured support across minor releases.
+
+[discrete]
+[id="API-availability-per-product-installation-topology_{context}"]
+== API availability per product installation topology
+The OpenShift distribution will continue to evolve its supported installation topology, and not all APIs in one install topology will necessarily be included in another. For example, certain topologies may restrict read/write access to particular APIs if they are in conflict with the product installation topology or not include a particular API at all if not pertinent to that topology. APIs that exist in a given topology will be supported in accordance with the compatibility tiers defined above.

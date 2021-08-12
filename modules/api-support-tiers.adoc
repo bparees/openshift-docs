@@ -15,14 +15,14 @@ APIs and application operating environments (AOEs) are stable within a major rel
 [discrete]
 [id="api-tier-2_{context}"]
 == API tier 2
-APIs and AOEs are stable within a major release for a minimum of 9 months or 3 minor releases from the announcement of deprecation, whichever is longer. API tier 2 is the default for components in {product-title} where not identified.
+APIs and AOEs are stable within a major release for a minimum of 9 months or 3 minor releases from the announcement of deprecation, whichever is longer.
 
 [discrete]
 [id="api-tier-3_{context}"]
 == API tier 3
-This level applies to languages, tools, applications, and optional Operators included with {product-title} through Operator Hub. Each component will specify a lifetime during which the API and AOE will be supported. Newer versions of language runtime specific components will attempt to be as API and AOE compatible from version to version as possible. Version to version compatibility is not guaranteed, however.
+This level applies to languages, tools, applications, and optional Operators included with {product-title} through Operator Hub. Each component will specify a lifetime during which the API and AOE will be supported. Newer versions of language runtime specific components will attempt to be as API and AOE compatible from minor version to minor version as possible. Minor version to minor version compatibility is not guaranteed, however.
 
-Components and developer tools that receive continuous updates through the Operator Hub, referred to as Operators and operands, should be considered API tier 3.  Developers should use caution and understand how these components may change with each release. Users are encouraged to consult the compatibility guidelines documented by the component.
+Components and developer tools that receive continuous updates through the Operator Hub, referred to as Operators and operands, should be considered API tier 3.  Developers should use caution and understand how these components may change with each minor release. Users are encouraged to consult the compatibility guidelines documented by the component.
 
 [discrete]
 [id="api-tier-4_{context}"]
@@ -67,14 +67,53 @@ API groups that end with the suffix `*.openshift.io` are governed by the {produc
 |API version example
 |API tier
 
-|`v1`
+|`apps.openshift.io/v1`
 |Tier 1
 
-|`v1beta1`
-|Tier 2
+|`authorization.openshift.io/v1`
+|Tier 1, some tier 1 deprecated
 
-|`v1alpha1`
-|If installed by default, tier 4.
+|`build.openshift.io/v1`
+|Tier 1, some tier 1 deprecated
+
+|`config.openshift.io/v1`
+|Tier 1
+
+|`image.openshift.io/v1`
+|Tier 1
+
+|`network.openshift.io/v1`
+|Tier 1
+
+|`network.operator.openshift.io/v1`
+|Tier 1
+
+|`oauth.openshift.io/v1`
+|Tier 1
+
+|`imagecontentsourcepolicy.operator.openshift.io/v1alpha1`
+|Tier 1
+
+|`project.openshift.io/v1`
+|Tier 1
+
+|`quota.openshift.io/v1`
+|Tier 1
+
+|`route.openshift.io/v1 `
+|Tier 1
+
+|`quota.openshift.io/v1`
+|Tier 1
+
+|`security.openshift.io/v1`
+|Tier 1 except for RangeAllocation(tier 4) and *Reviews(tier 2)
+
+|`template.openshift.io/v1`
+|Tier 1
+
+|`console.openshift.io/v1`
+|Tier 2
 
 |===
 
@@ -90,41 +129,5 @@ API groups that end with the suffix `monitoring.coreos.com` have the following m
 
 |`v1`
 |Tier 1
-
-|===
-
-[id="mapping-support-tiers-to-coreos-api-groups_{context}"]
-== Support for CoreOS API groups
-
-API groups that end with the suffix `operators.coreos.com` have the following mapping:
-
-[cols="2",options="header"]
-|===
-|API version example
-|API tier
-
-|`v1`
-|Tier 1
-
-|`v1alpha1`
-|Tier 3
-
-|`v1alpha2`
-|Tier 3
-
-|===
-
-[id="mapping-support-tiers-to-metal3-api-groups_{context}"]
-== Support for Metal3 API groups
-
-API groups that end with the suffix `metal3.io` have the following mapping:
-
-[cols="2",options="header"]
-|===
-|API version example
-|API tier
-
-|`v1alpha1`
-|Tier 2
 
 |===

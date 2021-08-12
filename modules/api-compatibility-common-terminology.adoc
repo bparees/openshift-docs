@@ -15,6 +15,8 @@ An API is a public interface implemented by a software program that enables it t
 
 An AOE is the integrated environment that executes the end-user application program. The AOE is a containerized environment that provides isolation from the host operating system (OS), and at a minimum allows the application to run in an isolated manner from the host OS libraries and binaries, but still share the same OS kernel as all other containers on the host. The AOE is enforced at runtime and it describes the interface between an application and its operating environment.  It includes intersection points between the platform, operating system and environment, with the user application including projection of downward API, DNS, resource accounting, device access, platform workload identity, isolation among containers, isolation between containers and host OS.
 
+The AOE does not include components which may vary by installation such as Container Network Interface(CNI) plugin selection or extensions to the product such as admission hooks.  Components which integrate with the cluster at a level below the container environment may be subjected to additional variation between versions.
+
 [id="api-compatibility-common-terminology-virtualized_{context}"]
 == Compatibility in a virtualized environment
 

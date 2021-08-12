@@ -47,13 +47,13 @@ Other than the most recent API version in each group, older API versions must be
 The following rules apply to all tier 1 APIs:
 
 * API elements can only be removed by incrementing the version of the group.
-* API objects must be able to round-trip between API versions without information loss, with the exception of whole REST resources that do not exist in some versions.
-* API versions in a given group can not deprecate until a new API version at least as stable is released.
+* API objects must be able to round-trip between API versions without information loss, with the exception of whole REST resources that do not exist in some versions.  In cases where equivalent fields do not exist between versions, data will be preserved in the form of annotations during conversion.
+* API versions in a given group can not deprecate until a new API version at least as stable is released, except in cases where the entire API object is being removed.
 
 [id="deprecating-cli-elements_{context}"]
 == Deprecating CLI elements
 
-CLI commands are not versioned in the same way as the API, but are user-facing component systems. The two major ways a user interacts with a CLI are through a command or flag, which is referred to in this context as CLI elements.
+Client facing CLI commands are not versioned in the same way as the API, but are user-facing component systems. The two major ways a user interacts with a CLI are through a command or flag, which is referred to in this context as CLI elements.
 
 All CLI elements default to API tier 1 unless otherwise noted.
 
